@@ -57,6 +57,12 @@ class Member
 
     public function getRole(): ?string
     {
+        $roles = $this->roles;
+
+        if ($this->isAdmin) {
+            $roles[] = 'ROLE_ADMIN';
+        }
+
         return $this->role;
     }
 

@@ -1,0 +1,15 @@
+{{ form_start(form) }}
+    {{ form_widget(form, {
+        attr: {class: 'flex flex-col gap-5 py-5'}
+    }) }}
+    <div class="flex justify-end">
+        <button class="rounded-md bg-indigo-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{ button_label|default('Save') }}</button>
+    </div>
+    
+    {% if form_errors(form) %}
+    <div class="alert alert-danger">
+        {{ form_errors(form) }}
+    </div>
+    
+{% endif %}
+{{ form_end(form) }}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Member{% endblock %}
+{% block main_title %}New Member{% endblock %}
+{% block toolbar %}
+
+    <a href="{{ path('app_member_index') }}" class="rounded-md ring-1 text-indigo-500 ring-indigo-500 px-2.5 py-1.5 text-sm font-semibold shadow-sm hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ">
+        Back to list
+    </a>
+{% endblock %}
+
+
+{% block body %}
+    <h1>Create new Member</h1>
+
+    {{ include('member/_form.html.twig') }}
+{% endblock %}
